@@ -1,0 +1,15 @@
+* C:\Users\3008h\Desktop\SEMESTER_2\Analog electronic circuits\Project\LTSPICE\Switch.asc
+M1 V_IF N002 N004 0 CMOSN l=0.18u w=1.8u ad=0.81p as=0.81p pd=4.5u ps=4.5u
+Vin N004 0 SINE(0 100m 105k)
+V_OSC N001 0 SINE(0 1 100k)
+V_BIAS N003 0 0.5
+R_Bias N003 N002 1Meg
+RL V_IF 0 1k
+Cc N002 N001 10µ
+.model NMOS NMOS
+.model PMOS PMOS
+.lib C:\Users\3008h\Documents\LTspiceXVII\lib\cmp\standard.mos
+.include TSMC_180nm.txt
+.tran 1m
+.backanno
+.end

@@ -1,0 +1,7 @@
+* C:\Users\3008h\Desktop\SEMESTER_2\Analog electronic circuits\Project\LTSPICE\Filter - Transient.asc
+C1 Vout 0 0.1µ
+R1 Vout N001 820
+V1 N001 0 SINE(0 1 10k)
+.tran 5m
+.backanno
+.end
